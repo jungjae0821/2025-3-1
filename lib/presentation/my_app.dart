@@ -1,4 +1,4 @@
-import 'package:daelim_2025/presentation/home/home_screen.dart';
+import 'package:daelim_2025/presentation/home/example_screen.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
@@ -8,10 +8,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: HomeScreen()
+      home: HomeScreen(),
     );
   }
 }

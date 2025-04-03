@@ -12,21 +12,19 @@ class _HomeScreenState extends State<HomeScreen> {
 
   void _handleIncreaseCount() {
     setState(() {
-            _count++;
-        });
+      _count++;
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text('Flutter Demo'),
-      ),
-      floatingActionButton: FloatingActionButton(onPressed: () {
-        _handleIncreaseCount();
-      },
-      child: Icon(Icons.add),
+      appBar: AppBar(backgroundColor: Colors.blue, title: Text('Flutter Demo')),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          _handleIncreaseCount();
+        },
+        child: Icon(Icons.add),
       ),
       body: SafeArea(
         child: SizedBox(
@@ -34,17 +32,8 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('버튼 클릭 시 횟수 증가',
-              style: TextStyle(
-                fontSize: 34,
-              ),
-              ),
-              Text(
-                '0',
-                style: TextStyle(
-                  fontSize: 40,
-                ),
-              )
+              Text('버튼 클릭 시 횟수 증가', style: TextStyle(fontSize: 34)),
+              Text('0', style: TextStyle(fontSize: 40)),
             ],
           ),
         ),
