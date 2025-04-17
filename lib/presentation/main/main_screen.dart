@@ -1,4 +1,7 @@
+import 'package:daelim_2025/presentation/main/widgets/in_de_container.dart';
 import 'package:flutter/material.dart';
+
+import '../common/widgets/white_box.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -8,16 +11,6 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  Widget _bulidContainer() {
-    return Container(
-      height: 120,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(15),
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,15 +23,16 @@ class _MainScreenState extends State<MainScreen> {
             children: [
               SizedBox(height: 35),
               Text('BMI CALCULATOR', style: TextStyle(fontSize: 20)),
+              // #region 나이, 몸무게 입력
               Row(
                 spacing: 20,
                 children: [
-                  Expanded(child: _bulidContainer()),
-                  Expanded(child: _bulidContainer()),
+                  Expanded(child: InDeContainer()),
+                  Expanded(child: InDeContainer()),
                 ],
               ),
-              _bulidContainer(),
-              _bulidContainer(),
+              WhiteBox(padding: EdgeInsets.all(18), child: SizedBox.shrink()),
+              WhiteBox(padding: EdgeInsets.all(25), child: SizedBox.shrink()),
               SizedBox(
                 width: double.infinity,
                 height: 75,
