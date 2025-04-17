@@ -13,7 +13,6 @@ class StartScreen extends StatelessWidget {
       TextStyle(color: Colors.white, fontSize: 25, fontWeight: FontWeight.bold);
   TextStyle get _descStyle => TextStyle(color: Color(0xFFC6C3F9), fontSize: 15);
 
-  // 타이틀 위젯
   Widget _buildAppName() {
     return Text(
       'BMI Calculator',
@@ -26,12 +25,10 @@ class StartScreen extends StatelessWidget {
     );
   }
 
-  // 타이틀
   Widget _buildTitle() {
     return Text(_title, style: _titleStyle);
   }
 
-  // 설명
   Widget _buildDescription() {
     return Text(
       _desc,
@@ -39,7 +36,6 @@ class StartScreen extends StatelessWidget {
     );
   }
 
-  // 타이틀과 설명을 묶움
   Widget _buildTitleDesc() {
     return RichText(
       text: TextSpan(
@@ -53,7 +49,6 @@ class StartScreen extends StatelessWidget {
     );
   }
 
-  // 시작 버튼
   Widget _buildStartButton(BuildContext context) {
     return SizedBox(
       width: double.infinity,
@@ -97,5 +92,3 @@ class StartScreen extends StatelessWidget {
     );
   }
 }
-
-//123

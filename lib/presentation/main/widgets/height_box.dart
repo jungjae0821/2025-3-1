@@ -17,9 +17,7 @@ class _HeightBoxState extends State<HeightBox> {
       padding: EdgeInsets.all(18),
       child: Column(
         children: [
-          // 타이틀
           Text('Height (CM)', style: TextStyle(fontSize: 18)),
-          // 숫자
           Text(
             '$_height',
             style: TextStyle(
