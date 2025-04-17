@@ -1,14 +1,20 @@
 import 'package:daelim_2025/presentation/common/widgets/white_box.dart';
+import 'package:daelim_2025/presentation/main/widgets/circle_icon_button.dart';
 import 'package:flutter/material.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
-
-import 'circle_icon_button.dart';
 
 class InDeContainer extends StatelessWidget {
   final String title;
   final int value;
-
-  const InDeContainer({super.key, required this.title, required this.value});
+  final VoidCallback onMinus;
+  final VoidCallback onPlus;
+  const InDeContainer({
+    super.key,
+    required this.title,
+    required this.value,
+    required this.onMinus,
+    required this.onPlus,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +23,9 @@ class InDeContainer extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          // 타이틀
+          Text(title, style: TextStyle(fontSize: 18)),
+          // 숫자
           Text(
             '$value',
             style: TextStyle(
@@ -25,17 +34,13 @@ class InDeContainer extends StatelessWidget {
               color: Color(0xFF6C63FF),
             ),
           ),
-          Text('Age', style: TextStyle(fontSize: 18)),
+          // Minus-Plus 버튼
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             spacing: 20,
             children: [
-              CircleIconButton(
-                  onTap: ,
-                  icon: LucideIcons.minus),
-              CircleIconButton(
-                  onTap: ,
-                  icon: LucideIcons.plus),
+              CircleIconButton(onTap: onMinus, icon: LucideIcons.minus),
+              CircleIconButton(onTap: onPlus, icon: LucideIcons.plus),
             ],
           ),
         ],
