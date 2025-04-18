@@ -8,6 +8,7 @@ class InDeContainer extends StatelessWidget {
   final int value;
   final VoidCallback onMinus;
   final VoidCallback onPlus;
+
   const InDeContainer({
     super.key,
     required this.title,
